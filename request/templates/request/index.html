@@ -9,19 +9,20 @@
 
 <body>
     <h1>Weather Information</h1>
-    <h3>{{ message }}</h3>
-    <form action="">
+    <h3>今日の天気の知りたい場所を選択してください。</h3>
+    <form action="{% url 'get_weather' %}" method="GET">
+        {% csrf_token %}
         <select name="検索フォーム" id="">
             <option value="">--選択してください--</option>
-            <option value="2700">大阪</option>
-            <option value="2800">兵庫(神戸)</option>
-            <option value="2900">奈良</option>
-            <option value="3000">和歌山</option>
-            <option value="2600">京都</option>
-            <option value="2500">滋賀(大津)</option>
-            <option value="2400">三重(津)</option>
+            <option value="270000">大阪</option>
+            <option value="280010">兵庫(神戸)</option>
+            <option value="280010">奈良</option>
+            <option value="300010">和歌山</option>
+            <option value="260010">京都</option>
+            <option value="250010">滋賀(大津)</option>
+            <option value="240010">三重(津)</option>
         </select>
-        <input type="submit">
+        <input type="submit" value="検索する">
     </form>
 </body>
 

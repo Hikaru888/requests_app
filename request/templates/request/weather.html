@@ -7,11 +7,13 @@
 </head>
 <body>
     <h1>Weather Information</h1>
-    <h3>{{ city }}</h3>
+    <h3>{{ city }} {{ date }}の天気</h3>
     <p>{{ weather_icon }}</p>
-    <p>{{ date }}</p>
-    <p>{{ temperature }}</p>
     <p>{{ weather_description }}</p>
+    <p>{{ max_temperature }}</p>
+    <p>{{ min_temperature }}</p>
+
+    <p><a href="{% url 'index' %}">トップページに戻る</a></p>
 </body>
 </html>
 
